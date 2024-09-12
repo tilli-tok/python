@@ -7,5 +7,4 @@ while len(password) < 8:
     print("Пароль должен быть больше 8 символов")
     password = input("Введите желаемый пароль: ")
 
-
 print(f"Вы ввели хороший пароль {password}")

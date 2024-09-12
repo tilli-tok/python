@@ -1,7 +1,8 @@
 T = input("Введите значение температуры воды: ")
 
-if T.isdigit()==True or (T[0]=="-" and T[1:].isdigit()==True):
-    T=int(T)
+try:
+    T = float(T)
+    T = int(T)
     if T < 0:
         print("Озеро замерзло")
     elif 0 <= T < 10:
@@ -18,5 +19,5 @@ if T.isdigit()==True or (T[0]=="-" and T[1:].isdigit()==True):
         print("Горячая")
     else:
         print("Кипяток")
-else:
+except:
     print("Вы ввели не число ")
