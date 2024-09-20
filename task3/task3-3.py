@@ -18,12 +18,23 @@ try:
 except FileNotFoundError:
     print("Файл не найден")
 
-'''
+
+def counts(lines,search_type):
+    line_count = 0
+    for line in lines:
+        if search_type in line:
+            line_count += 1
+    return f"\t {search_type}: {line_count}"
+print('Второй способ:\n')
 try:
     with open(file_path, 'r') as file:
         lines = file.readlines()
         line_count = len(lines)
+
+        print(f'Количество строк в файле: {line_count}')
+        print(counts(lines,'NEC'))
+        print(counts(lines,'SHARP'))
+        print(counts(lines,'SONY'))
 except FileNotFoundError:
     print("Файл не найден")
 
-print(f'Количество строк в файле: {line_count}')'''
