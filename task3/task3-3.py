@@ -25,6 +25,8 @@ def counts(lines,search_type):
         if search_type in line:
             line_count += 1
     return f"\t {search_type}: {line_count}"
+
+
 print('Второй способ:\n')
 try:
     with open(file_path, 'r') as file:
