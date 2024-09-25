@@ -1,9 +1,6 @@
 from tkinter import *
 from tkinter import messagebox as mb
 
-from dbus.mainloop import NULL_MAIN_LOOP
-
-
 def summ():
     dataFirst = e1.get()
     if not dataFirst.isdigit():
